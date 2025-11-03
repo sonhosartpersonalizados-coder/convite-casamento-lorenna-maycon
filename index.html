@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite de Casamento | Lorenna & Maycon</title>
+    
+    <style>
+        /* --- ESTILOS CSS EMBUTIDOS --- */
+        :root {
+            --cor-principal: #A9C993; 
+            --cor-texto: #333333;
+            --cor-fundo: #f5f5f5;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: var(--cor-fundo);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center; 
+            align-items: flex-start;
+            padding-top: 20px;
+        }
+        .card {
+            max-width: 400px;
+            width: 90%;
+            background-color: white; 
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            overflow: hidden; 
+        }
+        .hidden {
+            display: none !important; 
+        }
+        button {
+            background-color: var(--cor-principal); 
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            cursor: pointer;
+            border-radius: 8px;
+            margin: 10px 5px;
+            font-weight: bold;
+        }
+        .full-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .content-padding {
+            padding: 20px;
+        }
+        
+        /* --- ESTILOS PARA O CONTADOR --- */
+        .capa-container {
+            position: relative; 
+        }
+
+        .contador-flutuante {
+            position: absolute; 
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%); 
+            width: 80%; 
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif; 
+            color: #385d38; 
+        }
+        
+        .contador-flutuante #countdown {
+            color: #385d38 !important; 
+            margin: 0; 
+            font-size: 1.25em; 
+            line-height: 1.4;
+            font-weight: normal; 
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        
+        <section id="musica-capa">
+            <img src="./imagens/tela_musica.jpg" alt="Convite Especial" class="full-img">
+            <div class="content-padding">
+                <button id="btnComMusica">SEGUIR COM MÚSICA</button>
+                <button id="btnSemMusica">SEGUIR SEM MÚSICA</button>
+            </div>
+        </section>
+
+        <section id="capa" class="hidden"> 
+            <div class="capa-container">
+                <img src="./imagens/capa_02.jpg" alt="Capa do Convite Lorenna e Maycon" class="full-img">
+                <div class="contador-flutuante">
+                    <p id="countdown" data-date="2026-02-14T18:00:00">Calculando...</p>
+                </div>
+            </div> 
+            
+            <div class="content-padding">
+                <button id="btnAgendar">AGENDAR NA MINHA AGENDA</button> 
+                <button id="btnVerDetalhes">VER DETALHES DO EVENTO</button>
+            </div>
+        </section>
+
+        <section id="detalhes" class="hidden">
+            <img src="./imagens/detalhes_02.jpg" alt="Informações Importantes" class="full-img">
+            
+            <div class="content-padding">
+                <button id="btnMapa">COMO CHEGAR (MAPA)</button>
+                <button id="btnRSVP">CONFIRMAR PRESENÇA</button>
+                <button id="btnDressCode">DRESS CODE (VER DICAS)</button> 
+                <button id="btnListaPresentes">VER LISTA DE PRESENTES</button>
+            </div>
+        </section>
+        
+    </div>
+
+    <audio id="musica" src="musica.mp3" loop></audio>
+    <script src="script.js"></script> 
+</body>
+</html>
